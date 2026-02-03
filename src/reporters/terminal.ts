@@ -119,9 +119,9 @@ export function renderReport(
         "  ℹ️  Using vibe-check on private repos? Please support development:"
       )
     );
-    console.log(chalk.dim("     https://vibepacks.dev/check ($10 lifetime)\n"));
+    console.log(chalk.dim("     https://vibe-check-lilac-five.vercel.app ($10 lifetime)\n"));
   } else if (!hasLicense) {
-    console.log(chalk.dim("  ⚡ vibepacks.dev\n"));
+    console.log(chalk.dim("  ⚡ vibe-check-lilac-five.vercel.app\n"));
   }
 
   // Exit message

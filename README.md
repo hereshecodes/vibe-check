@@ -138,4 +138,4 @@ MIT
 
 ## Support
 
-Like vibe-check? Support development at [vibepacks.dev](https://vibepacks.dev)
+Like vibe-check? Support development at [vibe-check-lilac-five.vercel.app](https://vibe-check-lilac-five.vercel.app)
