@@ -1,0 +1,53 @@
+name: 'Vibe Check'
+description: 'The Grammarly for AI Code - Catch AI slop in your PRs'
+author: 'vibepacks'
+
+branding:
+  icon: 'check-circle'
+  color: 'green'
+
+inputs:
+  path:
+    description: 'Path to scan (default: current directory)'
+    required: false
+    default: '.'
+  threshold:
+    description: 'Minimum score to pass (default: 70)'
+    required: false
+    default: '70'
+  strict:
+    description: 'Fail on any violation (overrides threshold)'
+    required: false
+    default: 'false'
+
+outputs:
+  score:
+    description: 'The vibe score (0-100)'
+  violations:
+    description: 'Number of violations found'
+  passed:
+    description: 'Whether the check passed'
+
+runs:
+  using: 'composite'
+  steps:
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+
+    - name: Install vibe-check
+      shell: bash
+      run: npm install -g vibe-check
+
+    - name: Run vibe-check
+      id: vibe
+      shell: bash
+      run: |
+        ARGS="${{ inputs.path }}"
+        if [ "${{ inputs.strict }}" = "true" ]; then
+          ARGS="$ARGS --strict"
+        else
+          ARGS="$ARGS --threshold=${{ inputs.threshold }}"
+        fi
+        vibe-check $ARGS

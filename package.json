@@ -1,0 +1,40 @@
+{
+  "name": "vibe-check",
+  "version": "0.1.0",
+  "description": "The Grammarly for AI Code - Catch AI slop before it ships",
+  "type": "module",
+  "main": "dist/cli.js",
+  "bin": {
+    "vibe-check": "./dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "start": "node dist/cli.js",
+    "test": "node --test dist/**/*.test.js",
+    "lint": "node dist/cli.js src"
+  },
+  "keywords": [
+    "linter",
+    "ai",
+    "code-quality",
+    "typescript",
+    "vibe-coding"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "boxen": "^8.0.1",
+    "chalk": "^5.3.0",
+    "glob": "^11.0.0",
+    "ora": "^8.1.0",
+    "ts-morph": "^24.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.6.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
