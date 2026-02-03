@@ -94,7 +94,7 @@ export function renderReport(result, cwd, options = {}) {
     const isProbablyPrivate = isLikelyPrivateRepo();
     if (!hasLicense && isProbablyPrivate) {
         console.log(chalk.dim("  ℹ️  Using vibe-check on private repos? Please support development:"));
-        console.log(chalk.dim("     https://github.com/sponsors/hereshecodes ($10 lifetime)\n"));
+        console.log(chalk.dim("     https://buymeacoffee.com/hereshecodes ($10 lifetime)\n"));
     }
     else if (!hasLicense) {
         console.log(chalk.dim("  ⚡ vibe-check-lilac-five.vercel.app\n"));
