@@ -27,13 +27,13 @@ It doesn't replace ESLint—it catches the *vibe* problems ESLint misses.
 ## Install
 
 ```bash
-npm install -g vibe-check
+npm install -g github:hereshecodes/vibe-check
 ```
 
 Or run directly:
 
 ```bash
-npx vibe-check .
+npx github:hereshecodes/vibe-check .
 ```
 
 ## Usage
