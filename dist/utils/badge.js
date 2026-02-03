@@ -18,7 +18,7 @@ export function generateBadgeUrl(score) {
 }
 export function generateBadgeMarkdown(score) {
     const badgeUrl = generateBadgeUrl(score);
-    return `[![Vibe Score](${badgeUrl})](https://github.com/your-repo/vibe-check)`;
+    return `[![Vibe Score](${badgeUrl})](https://github.com/hereshecodes/vibe-check)`;
 }
 export function getBadgeInstructions(score) {
     const markdown = generateBadgeMarkdown(score);

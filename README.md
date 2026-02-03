@@ -65,7 +65,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: anthropics/vibe-check-action@v1
+      - uses: hereshecodes/vibe-check@v1
         with:
           path: src
           threshold: 70
